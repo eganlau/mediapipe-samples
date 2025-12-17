@@ -49,6 +49,7 @@ class CameraFragment : Fragment(), PoseLandmarkerHelper.LandmarkerListener {
 
     companion object {
         private const val TAG = "Pose Landmarker"
+        const val ARG_CAMERA_FACING = "cameraFacing"
     }
 
     private var _fragmentCameraBinding: FragmentCameraBinding? = null
@@ -126,6 +127,10 @@ class CameraFragment : Fragment(), PoseLandmarkerHelper.LandmarkerListener {
     @SuppressLint("MissingPermission")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        // Read camera facing from navigation arguments
+        cameraFacing = arguments?.getInt(ARG_CAMERA_FACING, CameraSelector.LENS_FACING_BACK)
+            ?: CameraSelector.LENS_FACING_BACK
 
         // Initialize our background executor
         backgroundExecutor = Executors.newSingleThreadExecutor()

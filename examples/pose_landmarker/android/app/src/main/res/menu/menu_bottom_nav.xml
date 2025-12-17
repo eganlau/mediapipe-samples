@@ -18,7 +18,12 @@
     <item
         android:id="@id/camera_fragment"
         android:icon="@drawable/ic_baseline_photo_camera_24"
-        android:title="@string/menu_camera" />
+        android:title="@string/menu_back_camera" />
+
+    <item
+        android:id="@id/front_camera_fragment"
+        android:icon="@drawable/ic_baseline_camera_front_24"
+        android:title="@string/menu_front_camera" />
 
     <item
         android:id="@id/gallery_fragment"
