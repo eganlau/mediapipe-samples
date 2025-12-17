@@ -118,3 +118,4 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+examples/pose_landmarker/android/app/src/main/assets/*.task
